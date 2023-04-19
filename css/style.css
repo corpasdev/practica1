@@ -1,0 +1,241 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Roboto:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Roboto:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;/*Que no cresca más de 784px*/
+    min-width: 320px;/*Que no se haga más pequeño de 320px*/
+}
+
+.columna:first-of-type {
+    border-radius: 10px 0 0 10px;
+}
+
+.columna:last-of-type {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+    padding: 3rem;
+    font-size: 1.2rem;
+    font-family: "Lexend Deca", sans-serif;
+    width: 25%;
+    transition: width .3s ease-in-out;
+    cursor: pointer;
+     
+}
+
+.columna.activa {
+    width: 50.1%;
+}
+
+
+.columna.uno {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.columna.dos {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.columna.tres {
+    background-color: hsl(179, 100%, 13%);
+}
+
+
+.columna .title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 2.5rem 0 2.5rem 0;
+    font-family: "Big Shoulders Display", sans-serif;
+}
+
+.desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;   
+}
+
+.desktop , .desktop .text{
+    flex-grow: 1;
+}
+
+.columna .desktop .text, .columna .mobile .text {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: inherit;
+    line-height: 1.8rem; 
+   
+}
+
+
+
+
+
+
+.btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 32px;
+    padding: .8rem 1.8rem;
+    font-family: inherit;
+    transition: background-color .3s ease;
+    margin-top: 4rem;
+}
+
+
+
+
+.uno .btn {
+    color:hsl(31, 77%, 52%)
+}
+
+.dos .btn {
+    color:hsl(184, 100%, 22%);
+}
+
+.tres .btn {
+    color:hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    background-color: transparent;
+    outline: 2px solid white;
+    color: white;
+}
+
+/* Created by Brandon Corpas */
+.created {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: .8rem;
+    gap: 1rem;
+    margin: 1.5rem 0 3rem 0;
+    background-color: hsla(204, 8%, 86%, .5);
+    border-radius: 10px;
+}
+
+.created__autor {
+    min-width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.created__autor__picture {
+    width: 64px;
+    border-radius: 50%;
+}
+
+
+.created__autor__text {
+    font-family: Roboto, sans-serif;
+    font-size: .9rem;
+}
+
+.created__autor__text .text__primary {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop .wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.desktop .wrapper .drowTop {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 892px) {
+    html, body {
+        height: auto;
+    }
+
+    .principal {
+      flex-direction: column;
+      align-content: center;
+      margin-top: 4rem;
+    }
+
+    .columna {
+        transition: height .5s ease-in-out;
+    }
+
+    .columna, .columna.activa {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    
+    .columna:first-of-type {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .columna:last-of-type {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .desktop .wrapper .drowTop {
+        display: block;
+    }
+   
+}
+
+.desplegar {
+    display: flex;
+}
+
+.plegar {
+    display: none;
+
+}
+
+
+
